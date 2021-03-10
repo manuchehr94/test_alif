@@ -6,12 +6,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Contacts</h1>
+                        <h1>Phones</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=read">Home</a></li>
-                            <li class="breadcrumb-item active">Contacts</li>
+                            <li class="breadcrumb-item"><a href="/php/Alif_Academy_php/test_alif/backend/?model=phone&action=read">Home</a></li>
+                            <li class="breadcrumb-item active">Phones</li>
                         </ol>
                     </div>
                 </div>
@@ -28,31 +28,29 @@
                         <thead class="thead-light">
                         <tr>
                             <th scope="col">Id</th>
-                            <th scope="col">Name</th>
                             <th scope="col">Phone_id</th>
-                            <th scope="col">Email_id</th>
+                            <th scope="col">Phone</th>
                             <th scope="col" style="text-align: right;">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <?php foreach ($allContacts as $contact): ?>
+                        <?php foreach ($allPhones as $phone): ?>
                             <tr>
-                                <td><?=$contact['id']?></td>
-                                <td><?=$contact['name']?></td>
-                                <td><?=$contact['phone']?></td>
-                                <td><?=$contact['email']?></td>
+                                <td><?=$phone['id']?></td>
+                                <td><?=$phone['phone_id']?></td>
+                                <td><?=$phone['phone']?></td>
                                 <td class="project-actions text-right">
                                   <!--<a class="btn btn-primary btn-sm" href="#">
                                         <i class="fas fa-folder">
                                         </i>
                                         View
                                     </a>-->
-                                    <a class="btn btn-info btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=update&id=<?=$contact['id']?>">
+                                    <a class="btn btn-info btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=phone&action=update&id=<?=$phone['id']?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=delete&id=<?=$contact['id']?>">
+                                    <a class="btn btn-danger btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=phone&action=delete&id=<?=$phone['id']?>">
                                         <i class="fas fa-trash">
                                         </i>
                                         Delete

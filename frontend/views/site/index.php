@@ -18,21 +18,24 @@ include_once __DIR__ . "/../header.php";
                 </div>
                 <!--GRID BLOG-->
                 <div class="grid">
+                    <?php foreach ($allContacts as $contacts) : ?>
                     <div class="grid-item">
-                        <?php foreach ($allContacts as $contact) : ?>
                             <div class="wrap-article">
-                                <img alt="blog-1" class="img-circle text-center" src="images/blog-1.png">
-                                <a href="#">
-                                    <h3 class="title">
-                                        Popular Design in 2015
-                                    </h3>
-                                </a>
+                                <img alt="blog-1" class="img-circle text-center" src="images/reza.jpg">
+                                <h3 class="title">
+                                    <?=$contacts['name']?>
+                                </h3>
                                 <p class="content-blog">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.
+                                <label>Phone</label>
+                                    <?=$contacts['phone']?>
+                                </p>
+                                <p class="content-blog">
+                                <label>Email</label>
+                                     <?=$contacts['email']?>
                                 </p>
                             </div>
-                        <?php endforeach; ?>
                     </div>
+                    <?php endforeach; ?>
                 </div>
 
             </div>

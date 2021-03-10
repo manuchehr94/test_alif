@@ -1,8 +1,9 @@
 <?php
 
 include_once  __DIR__ . "/../../../common/src/Model/Contacts.php";
+include_once __DIR__ . "/Interface/ControllerInterface.php";
 
-class ContactsController
+class ContactsController implements ControllerInterface
 {
     public function create()
     {

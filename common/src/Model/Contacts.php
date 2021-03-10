@@ -31,7 +31,7 @@ class Contacts
         if($this->id > 0) {
 
             $query = "Update contacts set 
-                                        `name`='" . $this->title . "', 
+                                        `name`='" . $this->name . "', 
                                         `phone`='" . $this->phone . "', 
                                         `email`='" . $this->email . "'
                                          where id=" . $this->id . " limit 1";
@@ -51,7 +51,6 @@ class Contacts
     public function all()
     {
         $result = mysqli_query($this->conn, "Select * from contacts");
-        //$result = reset($result);
         return  mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
 
@@ -70,7 +69,5 @@ class Contacts
         $oneContact = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return reset($oneContact);
     }
-
-
 
 }
