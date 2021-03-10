@@ -75,6 +75,29 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=read" class="nav-link">
+                            <i class="nav-icon fas fa-table"></i>
+                            <p>
+                                Emails
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=create" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Create Emails</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=read" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>List of Emails</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
