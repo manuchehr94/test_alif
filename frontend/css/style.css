@@ -1262,3 +1262,18 @@ ul.portfolio-image li .desc{
 }
 .skillst .count-bar .count { background-color: #818181;}
 .skillst .count-bar .count span:after { border-top: 4px solid #818181;}
+
+#pager {
+  display: flex;
+  justify-content: center;
+}
+
+#pager div {
+  margin: 0 5px;
+}
+
+.current a {
+  color: green;
+  font-weight: 900;
+  text-decoration: underline;
+}

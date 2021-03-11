@@ -1,5 +1,7 @@
 <?php
 include_once __DIR__ . "/../header.php";
+include_once __DIR__ . "/../../../common/src/Model/Contacts.php";
+include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
 ?>
 <!--BLOG-->
 <section class="grey-bg" id="blog">
@@ -65,6 +67,18 @@ include_once __DIR__ . "/../header.php";
     </div>
 </section>
 <!--/.BLOG END-->
+
+<!-- Pager -->
+<?php
+    PagerService::printPager();
+?>
+<!-- Pager End -->
+<div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
 <?php
 include_once __DIR__ . "/../footer.php";
 ?>

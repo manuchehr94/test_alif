@@ -4,6 +4,8 @@ include_once __DIR__ . "/../Service/DBConnector.php";
 
 class Contacts
 {
+    const LIMIT_PER_PAGE = 6;
+
     public $id;
     public $name;
     public $phone;
@@ -48,6 +50,12 @@ class Contacts
          mysqli_query($this->conn, $query);
     }
 
+    public function allPerPage($limit = self::LIMIT_PER_PAGE, $offset = 0)
+    {
+        $result = mysqli_query($this->conn, "Select * from contacts limit $offset, $limit");
+        return  mysqli_fetch_all($result, MYSQLI_ASSOC);
+    }
+
     public function all()
     {
         $result = mysqli_query($this->conn, "Select * from contacts");
@@ -68,6 +76,16 @@ class Contacts
         $result = mysqli_query($this->conn, "Select * from contacts where id = $id limit 1");
         $oneContact = mysqli_fetch_all($result, MYSQLI_ASSOC);
         return reset($oneContact);
+    }
+
+    public function getNumberPage($limit = self::LIMIT_PER_PAGE)
+    {
+        $query = mysqli_query($this->conn, "Select count(*) from contacts");
+        $result = mysqli_fetch_all($query, MYSQLI_ASSOC);
+        $result = reset($result);
+        $result = reset($result);
+
+        return $result / $limit !== 0 ? ceil($result / $limit) : $result / $limit;
     }
 
 }
