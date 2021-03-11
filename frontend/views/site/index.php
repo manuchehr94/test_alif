@@ -22,19 +22,40 @@ include_once __DIR__ . "/../header.php";
                     <div class="grid-item">
                             <div class="wrap-article">
                                 <img alt="blog-1" class="img-circle text-center" src="images/reza.jpg">
-                                <h3 class="title">
+                                <h1 class="title">
                                     <?=$contacts['name']?>
-                                </h3>
+                                </h1>
                                 <p class="content-blog">
-                                <label>Phone</label>
-                                    <?=$contacts['phone']?>
+                                    <label>Phone(s):</label>
+                                    <ol>
+                                     <?php foreach ($allPhones as $key => $phones): ?>
+                                         <?php foreach ($phones as $phone) : ?>
+
+                                            <?=$key == $contacts['name'] ?
+                                                 "<li>$phone</li> " : ''
+                                             ?>
+
+                                         <?php endforeach; ?>
+                                     <?php endforeach; ?>
+                                    </ol>
                                 </p>
                                 <p class="content-blog">
-                                <label>Email</label>
-                                     <?=$contacts['email']?>
+                                <label>Email(s):</label>
+                                <ol>
+                                    <?php foreach ($allEmails as $key => $emails): ?>
+                                        <?php foreach ($emails as $email) : ?>
+
+                                            <?=$key == $contacts['name'] ?
+                                                "<li>$email</li> " : ''
+                                            ?>
+
+                                        <?php endforeach; ?>
+                                    <?php endforeach; ?>
+                                </ol>
                                 </p>
                             </div>
                     </div>
+
                     <?php endforeach; ?>
                 </div>
 

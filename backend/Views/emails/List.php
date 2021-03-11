@@ -35,6 +35,7 @@
                         </thead>
                         <tbody>
                         <?php foreach ($allEmails as $email): ?>
+
                             <tr>
                                 <td><?=$email['id']?></td>
                                 <td><?=$email['email_id']?></td>
