@@ -3,11 +3,20 @@ include_once __DIR__ . "/../header.php";
 include_once __DIR__ . "/../../../common/src/Model/Contacts.php";
 include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
 ?>
+
+
 <!--BLOG-->
 <section class="grey-bg" id="blog">
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div class="productSearch">
+                    <form>
+                        <input class="productSearchInput" type="text" placeholder="Search">
+                        <img class="searchIcon" src="images/search.png" alt="search" title="search" aria-hidden="true">
+                    </form>
+                </div>
                 <h3 class="title-small-center text-center">
                     <span>My contacts</span>
                 </h3>
@@ -23,7 +32,7 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                     <?php foreach ($allContacts as $contacts) : ?>
                     <div class="grid-item">
                             <div class="wrap-article">
-                                <img alt="blog-1" class="img-circle text-center" src="images/reza.jpg">
+                                <img alt="blog-1" class="img-circle text-center" src="images/<?=rand(1, 5)?>.jpg">
                                 <h1 class="title">
                                     <?=$contacts['name']?>
                                 </h1>

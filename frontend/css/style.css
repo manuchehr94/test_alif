@@ -819,17 +819,26 @@ ul.portfolio-image li .desc{
   position: relative;
 }
 /*-------------- e. blog -------------*/
-.grid {margin-top: 60px;}
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+.grid {
+  display: flex;
+  margin-top: 60px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
+/*.grid:after {*/
+/*  content: '';*/
+/*  display: block;*/
+/*  clear: both;*/
+/*}*/
 .grid-item {
-  width: 33.333%;
-  float: left;
-  top: 0px;
-  left: 0px;
+  min-width: 33.333%;
+  box-sizing:border-box;
+  display: flex;
+//float: left;
+  /*top: 0px;*/
+  /*left: 0px;*/
   overflow: hidden;
   min-height: 1px;
   padding-right: 15px;
@@ -840,6 +849,7 @@ ul.portfolio-image li .desc{
   border: 1px solid rgba(129, 129, 129, 0.1);
   background: #ffffff;
   padding: 30px 20px;
+  width: 100%;
 }
 .grid-item .wrap-article img {
   text-align: center;
@@ -912,7 +922,7 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../images/reza.jpg');
+  background: url('../images/1.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1277,3 +1287,59 @@ ul.portfolio-image li .desc{
   font-weight: 900;
   text-decoration: underline;
 }
+
+
+/**
+
+ */
+
+
+.productSearch {
+  position: absolute;
+  left: 50%;
+  top: -1%;
+  transform: translate(-5%, -5%);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+}
+
+.productSearch .productSearchInput{
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  width: 0%;
+  outline: none;
+  transition: all 0.3s ease;
+  position: relative;
+  font: inherit;
+}
+
+.searchIcon {
+  position: absolute;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.searchIcon.active {
+  top: 6px;
+  right: 8px;
+}
+
+.productSearch.active{
+  width: 220px;
+//padding-left: 10px;
+  transition: all 0.6s ease;
+  left: 42%;
+}
+
+.productSearch .productSearchInput.active{
+  width: 98%;
+//padding-left: 6px;
+  transition: all 0.4s 0.7s ease;
+  border: 1px solid #e47023;
+}
+
+/**
+
+ */

@@ -18,7 +18,9 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
 
-
+    <!--js scripts-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
