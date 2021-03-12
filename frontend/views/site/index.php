@@ -4,7 +4,6 @@ include_once __DIR__ . "/../../../common/src/Model/Contacts.php";
 include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
 ?>
 
-
 <!--BLOG-->
 <section class="grey-bg" id="blog">
 
@@ -12,7 +11,9 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
         <div class="row">
             <div class="col-md-12">
                 <div class="productSearch">
-                    <form action="/php/Alif_Academy_php/test_alif/frontend/?model=search&action=view" method="POST">
+                    <form action="" method="GET">
+                        <input type="hidden" name="model" value="search">
+                        <input type="hidden" name="action" value="view">
                         <input class="productSearchInput" type="text" placeholder="Search" name="search">
                         <img class="searchIcon" src="images/search.png" alt="search" title="search" aria-hidden="true">
                     </form>
