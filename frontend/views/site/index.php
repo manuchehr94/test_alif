@@ -12,8 +12,8 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
         <div class="row">
             <div class="col-md-12">
                 <div class="productSearch">
-                    <form>
-                        <input class="productSearchInput" type="text" placeholder="Search">
+                    <form action="/php/Alif_Academy_php/test_alif/frontend/?model=search&action=view" method="POST">
+                        <input class="productSearchInput" type="text" placeholder="Search" name="search">
                         <img class="searchIcon" src="images/search.png" alt="search" title="search" aria-hidden="true">
                     </form>
                 </div>
