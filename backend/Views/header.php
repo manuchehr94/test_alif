@@ -8,9 +8,9 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="/php/Alif_Academy_php/shop/backend/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="/php/Alif_Academy_php/shop/backend/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -19,8 +19,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="http://localhost/php/Alif_Academy_php/test_alif/backend/index.php?model=contacts&action=read" class="brand-link">
-            <img src="/php/Alif_Academy_php/test_alif/backend/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <a href="/index.php?model=contacts&action=read" class="brand-link">
+            <img src="/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">AdminLTE 3</span>
         </a>
 
@@ -30,7 +30,7 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=contacts&action=read" class="nav-link">
+                        <a href="/?model=contacts&action=read" class="nav-link">
                             <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Contacs
@@ -39,13 +39,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=contacts&action=create" class="nav-link">
+                                <a href="/?model=contacts&action=create" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Create Contacts</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=contacts&action=read" class="nav-link">
+                                <a href="/?model=contacts&action=read" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>List of Contacts</p>
                                 </a>
@@ -53,7 +53,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=phone&action=read" class="nav-link">
+                        <a href="/?model=phone&action=read" class="nav-link">
                             <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Phones
@@ -62,13 +62,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=phone&action=create" class="nav-link">
+                                <a href="/?model=phone&action=create" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Create Phone</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=phone&action=read" class="nav-link">
+                                <a href="/?model=phone&action=read" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>List of Phones</p>
                                 </a>
@@ -76,7 +76,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=read" class="nav-link">
+                        <a href="/?model=email&action=read" class="nav-link">
                             <i class="nav-icon fas fa-table"></i>
                             <p>
                                 Emails
@@ -85,13 +85,13 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=create" class="nav-link">
+                                <a href="/?model=email&action=create" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Create Emails</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="/php/Alif_Academy_php/test_alif/backend/index.php?model=email&action=read" class="nav-link">
+                                <a href="/?model=email&action=read" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>List of Emails</p>
                                 </a>

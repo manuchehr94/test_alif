@@ -20,7 +20,7 @@
     </section>
     <section class="content">
         <div class="card card-info">
-            <form class="form-horizontal" action="/php/Alif_Academy_php/test_alif/backend/?model=email&action=save" method="post">
+            <form class="form-horizontal" action="/?model=email&action=save" method="post">
                <div class="card-body">
                    <input value="<?=$oneEmail['id'] ?? "" ?>" type = "hidden" name ="id">
                    <div class="form-group row">

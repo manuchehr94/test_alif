@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=read">Home</a></li>
+                            <li class="breadcrumb-item"><a href="/?model=contacts&action=read">Home</a></li>
                             <li class="breadcrumb-item active">Contacts</li>
                         </ol>
                     </div>
@@ -47,12 +47,12 @@
                                         </i>
                                         View
                                     </a>-->
-                                    <a class="btn btn-info btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=update&id=<?=$contact['id']?>">
+                                    <a class="btn btn-info btn-sm" href="/?model=contacts&action=update&id=<?=$contact['id']?>">
                                         <i class="fas fa-pencil-alt">
                                         </i>
                                         Edit
                                     </a>
-                                    <a class="btn btn-danger btn-sm" href="/php/Alif_Academy_php/test_alif/backend/?model=contacts&action=delete&id=<?=$contact['id']?>">
+                                    <a class="btn btn-danger btn-sm" href="/?model=contacts&action=delete&id=<?=$contact['id']?>">
                                         <i class="fas fa-trash">
                                         </i>
                                         Delete

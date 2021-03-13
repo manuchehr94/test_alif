@@ -35,28 +35,28 @@ class PagerService
         <div id="pager">
             <?php
                 print '<div class="link-to-end">
-                            <a href="/php/Alif_Academy_php/test_alif/frontend/?model=contacts&action=all&page=1">
+                            <a href="/?model=contacts&action=all&page=1">
                                 <<
                             </a>
                         </div>';
                 print '<div class="link-to-left">
-                            <a href="/php/Alif_Academy_php/test_alif/frontend/?model=contacts&action=all&page=' . intval(($currentPage > 2) ? ($currentPage - 1) : 1)  . '">
+                            <a href="/?model=contacts&action=all&page=' . intval(($currentPage > 2) ? ($currentPage - 1) : 1)  . '">
                                 <
                             </a>
                         </div>';
                 foreach ($arrNumberPages as $numberPage) {
                     print '<div class="link-pager ' .  (intval($_GET['page'] ?? 0) === $numberPage ? 'current' : '') . '">
-                                <a href="/php/Alif_Academy_php/test_alif/frontend/?model=contacts&action=all&page=' . $numberPage . '">' . $numberPage . '
+                                <a href="/?model=contacts&action=all&page=' . $numberPage . '">' . $numberPage . '
                                 </a>
                             </div>';
                 }
                 print '<div class="link-to-right">
-                            <a href="/php/Alif_Academy_php/test_alif/frontend/?model=contacts&action=all&page=' . intval(($currentPage < ($NumberOfAllPages)) ? ($currentPage + 1) : ($NumberOfAllPages)) . '">
+                            <a href="/?model=contacts&action=all&page=' . intval(($currentPage < ($NumberOfAllPages)) ? ($currentPage + 1) : ($NumberOfAllPages)) . '">
                                 >
                             </a>
                         </div>';
                 print '<div class="link-to-end">
-                            <a href="/php/Alif_Academy_php/test_alif/frontend/?model=contacts&action=all&page=' . ($NumberOfAllPages) . '">
+                            <a href="/?model=contacts&action=all&page=' . ($NumberOfAllPages) . '">
                                 >>
                             </a>
                         </div>';
