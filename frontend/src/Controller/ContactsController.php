@@ -12,12 +12,8 @@ class ContactsController
         $offset = (intval($_GET['page'] ?? 1) - 1) * $limit;
         $offset = $offset < 0 ? 0 : $offset;
 
-
         $allContacts = (new Contacts())->allPerPage($limit, $offset);
         $NumberOfAllPages = (new Contacts())->getNumberPage($limit);
-
-        $allPhones = (new ContactsPhoneAndEmail())->phones();
-        $allEmails = (new ContactsPhoneAndEmail())->emails();
 
         include_once __DIR__ . "/../../views/site/index.php";
     }

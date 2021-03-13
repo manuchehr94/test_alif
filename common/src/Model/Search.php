@@ -13,6 +13,9 @@ class Search
 
     public function searchByName($queryForSearch)
     {
+        if(empty($queryForSearch)) {
+            return $queryForSearch = "You have made empty search";
+        }
 
 
 //        $result = mysqli_query($this->conn, "Select * from contacts");
@@ -33,20 +36,16 @@ class Search
                             phone.phone as phone, 
                             email.email as email 
                         FROM contacts 
-                        JOIN phone 
+                        LEFT JOIN phone 
                         ON 
                         contacts.phone = phone.phone_id 
-                        JOIN email 
+                        LEFT JOIN email 
                         ON 
                         contacts.email = email.email_id
                          WHERE MATCH (contacts.name) AGAINST ('$queryForSearch') OR
                          MATCH (phone.phone) AGAINST ('$queryForSearch') OR
                          MATCH (email.email) AGAINST ('$queryForSearch')";
 
-
-        if(empty($queryForSearch)) {
-            return $queryForSearch;
-        }
 
         $result = mysqli_query($this->conn, $queryForBD);
         $resultArr = mysqli_fetch_all($result, MYSQLI_ASSOC);

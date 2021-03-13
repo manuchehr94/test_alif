@@ -65,8 +65,10 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                             </div>
                         <?php endforeach; ?>
                         <?php endif; ?>
+                    </div>
                 </div>
-            <!--/.GRID BLOG END-->
+                <!--/.GRID BLOG END-->
+            </div>
         </div>
     </div>
 </section>

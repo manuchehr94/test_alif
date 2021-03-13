@@ -6,17 +6,7 @@ class SearchController
 {
     public function view()
     {
-        $queryForSearch = $_GET['search'];
-//        if (isset($_GET['search'])) {
-//            $_GET['model'] = 'search';
-//            $_GET['action'] = 'view';
-//        }
-
-//        print_r($queryForSearch = $_GET['model']);
-//        die();
-        //$queryForSearchGet = $_GET['search'];
-        //print_r($queryForSearchGet);
-       // $queryForSearch = htmlspecialchars(isset($_POST) ? $_POST['search'] : '');
+        $queryForSearch = trim(htmlspecialchars($_GET['search'] ?? ''));
 
         $searchArr = (new Search())->searchByName($queryForSearch);
 

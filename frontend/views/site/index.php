@@ -30,38 +30,26 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                 </div>
                 <!--GRID BLOG-->
                 <div class="grid">
-                    <?php foreach ($allContacts as $contacts) : ?>
+                    <?php foreach ($allContacts as $oneContactKey => $oneContactValue) : ?>
                     <div class="grid-item">
                             <div class="wrap-article">
                                 <img alt="blog-1" class="img-circle text-center" src="images/<?=rand(1, 5)?>.jpg">
                                 <h1 class="title">
-                                    <?=$contacts['name']?>
+                                    <?=$oneContactKey?>
                                 </h1>
                                 <p class="content-blog">
                                     <label>Phone(s):</label>
-                                    <ol>
-                                     <?php foreach ($allPhones as $key => $phones): ?>
-                                         <?php foreach ($phones as $phone) : ?>
-
-                                            <?=$key == $contacts['name'] ?
-                                                 "<li>$phone</li> " : ''
-                                             ?>
-
-                                         <?php endforeach; ?>
-                                     <?php endforeach; ?>
-                                    </ol>
+                                <ol>
+                                    <?php foreach ($oneContactValue['phone'] as $phone): ?>
+                                        <li><?=$phone?></li>
+                                    <?php endforeach; ?>
+                                </ol>
                                 </p>
                                 <p class="content-blog">
-                                <label>Email(s):</label>
+                                    <label>Email(s):</label>
                                 <ol>
-                                    <?php foreach ($allEmails as $key => $emails): ?>
-                                        <?php foreach ($emails as $email) : ?>
-
-                                            <?=$key == $contacts['name'] ?
-                                                "<li>$email</li> " : ''
-                                            ?>
-
-                                        <?php endforeach; ?>
+                                    <?php foreach ($oneContactValue['email'] as $email): ?>
+                                        <li><?=$email?></li>
                                     <?php endforeach; ?>
                                 </ol>
                                 </p>
