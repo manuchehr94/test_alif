@@ -1,7 +1,6 @@
 <?php
 
 include_once __DIR__ . "/../../../common/src/Model/Contacts.php";
-include_once __DIR__ . "/../../../common/src/Model/ContactsPhoneAndEmail.php";
 
 class ContactsController
 {

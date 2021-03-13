@@ -1,6 +1,7 @@
 <?php
 
 include_once __DIR__ . "/../Service/DBConnector.php";
+include_once __DIR__ . "/../Service/ArrayFormService.php";
 
 class Search
 {
@@ -48,30 +49,12 @@ class Search
 
 
         $result = mysqli_query($this->conn, $queryForBD);
-        $resultArr = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $arr = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         if(!$result) {
             print "query isn't working";
             die();
         }
-
-        $itemIds = [];
-        foreach ($resultArr as $item) {
-            if(empty($itemIds[$item['name']])) {
-                $itemIds[$item['name']]['phone'] = [];
-                $itemIds[$item['name']]['email'] = [];
-            }
-
-            if(!in_array($item['phone'], $itemIds[$item['name']]['phone']) ) {
-                $itemIds[$item['name']]['phone'][] = $item['phone'];
-             }
-
-            if(!in_array($item['email'], $itemIds[$item['name']]['email']) ) {
-                $itemIds[$item['name']]['email'][] = $item['email'];
-            }
-
-        }
-
-        return $itemIds;
+        return ArrayFormService::formArray($arr);
     }
 }
