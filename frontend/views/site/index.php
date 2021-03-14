@@ -59,7 +59,7 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                                 </p>
 
                                 <p class="content-blog">
-                                    <label><?=(count($oneContactValue['email']) > 1) ? 'Emails:' : 'email:'?></label>
+                                    <label><?=(count($oneContactValue['email']) > 1) ? 'Emails:' : 'Email:'?></label>
 
                                     <?php if(!empty($oneContactValue['email'][0])) : ?>
                                     <ol>

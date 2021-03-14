@@ -176,7 +176,8 @@ img { max-width: 100%; }
   font-weight: 400;
   margin-top: 40px;
   line-height: 30px;
-  font-size: 14px;
+  font-size: 18px;
+  font-style: italic;
 }
 .pad-bottom {
   padding-bottom: 80px;

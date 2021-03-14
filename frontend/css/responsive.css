@@ -118,6 +118,10 @@
 	.productSearch img.active {
 		right: 20px;
 	}
+
+	.spaceForSearch {
+		top: -10%;
+	}
 }
 
 
