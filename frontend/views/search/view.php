@@ -29,10 +29,14 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <p class="content-details text-center">
-                            <?=(!empty($searchArr)) ?
-                                'Without this man I cannot live...' :
-                                'We couldn\'t find anyone that matches your search. Please revise your search'
+                            <?php  if (!empty($searchArr) && is_array($searchArr)) : ?>
+                                Without this man I cannot live...
+                            <?php elseif(is_string($searchArr)):
+                                print $searchArr
                             ?>
+                            <?php elseif(empty($searchArr) && is_array($searchArr)) : ?>
+                                We haven't found anyone who matches your search
+                            <?php endif; ?>
                         </p>
                     </div>
                 </div>

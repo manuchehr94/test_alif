@@ -61,6 +61,7 @@ class Email
     {
         $result = mysqli_query($this->conn, "Select * from email where id = $id limit 1");
         $oneEmail = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
         return reset($oneEmail);
     }
 

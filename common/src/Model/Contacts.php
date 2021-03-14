@@ -1,7 +1,7 @@
 <?php
 
 include_once __DIR__ . "/../Service/DBConnector.php";
-include_once __DIR__ . "/../Service/ArrayFormService.php";
+include_once __DIR__ . "/../Service/HelperService.php";
 
 class Contacts
 {
@@ -68,7 +68,7 @@ class Contacts
         $resultQuery = mysqli_query($this->conn, $query);
         $arr = mysqli_fetch_all($resultQuery, MYSQLI_ASSOC);
 
-        return ArrayFormService::formArray($arr);
+        return HelperService::formArray($arr, 'name','phone', 'email');
     }
 
     public function all()
@@ -90,6 +90,7 @@ class Contacts
     {
         $result = mysqli_query($this->conn, "Select * from contacts where id = $id limit 1");
         $oneContact = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
         return reset($oneContact);
     }
 

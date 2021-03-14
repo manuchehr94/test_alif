@@ -61,6 +61,7 @@ class Phone
     {
         $result = mysqli_query($this->conn, "Select * from phone where id = $id limit 1");
         $onePhone = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
         return reset($onePhone);
     }
 
