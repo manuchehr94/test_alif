@@ -13,9 +13,9 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
             <div class="col-md-12">
                 <div class="productSearch">
                     <form action="" method="GET">
+                        <input class="productSearchInput" type="text" placeholder="Search" name="search">
                         <input type="hidden" name="model" value="search">
                         <input type="hidden" name="action" value="view">
-                        <input class="productSearchInput" type="text" placeholder="Search" name="search">
                         <img class="searchIcon" src="images/search.png" alt="search" title="search" aria-hidden="true">
                     </form>
                 </div>

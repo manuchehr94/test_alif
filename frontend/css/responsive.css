@@ -45,7 +45,7 @@
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1200px){
 	/*------ header -----*/	
 	.for-sticky{ padding: 0; }
 	.logo-nav { margin-left: 0;}
@@ -95,9 +95,29 @@
 	}
 }
 
-@media screen and (min-width: 1024px){
-	.content-right {
-	  margin-top: 20px;
-	  padding: 0 20px 0 60px; 
+@media screen and (max-width: 670px){
+	.grid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.grid-item {
+		width: 80%;
 	}
 }
+
+@media screen and (max-width: 992px){
+	.productSearch {
+		top: -1.5%;
+	}
+
+	.productSearch input.active {
+		left: -5%;
+	}
+
+	.productSearch img.active {
+		right: 20px;
+	}
+}
+
+
