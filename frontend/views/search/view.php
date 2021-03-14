@@ -92,15 +92,11 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
 <!--/.CONTACTS END-->
 
 <!-- Pager -->
-<?php
+<div class="sitePager">
+    <?php
     PagerService::printPager();
-?>
-<!-- Pager End -->
-<div>
-    <br>
-    <br>
-    <br>
-    <br>
+    ?>
+    <!-- Pager End -->
 </div>
 <?php
 include_once __DIR__ . "/../footer.php";

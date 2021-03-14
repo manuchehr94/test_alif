@@ -6,8 +6,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="BdgPixel" name="author">
-    <!--Fav-->
-    <link href="images/favicon.ico" rel="shortcut icon">
 
     <!--styles-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
