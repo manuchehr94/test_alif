@@ -5,7 +5,7 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
 ?>
 
 
-<!--BLOG-->
+<!--CONTACTS-->
 <section class="grey-bg" id="blog">
 
     <div class="container">
@@ -19,60 +19,77 @@ include_once __DIR__ . "/../../../common/src/Service/PagerService.php";
                         <img class="searchIcon" src="images/search.png" alt="search" title="search" aria-hidden="true">
                     </form>
                 </div>
-                <h3 class="title-small-center text-center">
-                    <span>My contacts</span>
-                </h3>
+                <a href="/?model=contacts&action=all">
+                    <h3 class="title-small-center text-center">
+                        <span>My contacts</span>
+                    </h3>
+                </a>
+
+
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <p class="content-details text-center">
-                            Without these people I cannot live...
+                            <?=(!empty($searchArr)) ?
+                                'Without this man I cannot live...' :
+                                'We couldn\'t find anyone that matches your search. Please revise your search'
+                            ?>
                         </p>
                     </div>
                 </div>
-                <!--GRID BLOG-->
+
+                <!--GRID CONTACTS-->
                 <div class="grid">
-                    <?php
-                        if(empty($searchArr)) {
-                            echo "We could't found anyone that matches your search...";
-                        }
-                    ?>
-                    <div class="grid">
-                        <?php if(isset($searchArr) && is_array($searchArr)) :
-                            foreach ($searchArr as $oneContactKey => $oneContactValue) : ?>
-                            <div class="grid-item">
-                                <div class="wrap-article">
-                                    <img alt="blog-1" class="img-circle text-center" src="images/<?=rand(1, 5)?>.jpg">
-                                    <h1 class="title">
-                                        <?=$oneContactKey?>
-                                    </h1>
-                                    <p class="content-blog">
-                                        <label>Phone(s):</label>
-                                        <ol>
+
+                    <?php if(isset($searchArr) && is_array($searchArr)) :
+
+                        foreach ($searchArr as $oneContactKey => $oneContactValue) : ?>
+                        <div class="grid-item">
+                            <div class="wrap-article">
+                                <img alt="blog-1" class="img-circle text-center" src="images/<?=rand(1, 5)?>.jpg">
+                                <h1 class="title">
+                                    <?=$oneContactKey?>
+                                </h1>
+
+                                <p class="content-blog">
+                                    <label><?=(count($oneContactValue['phone']) > 1) ? 'Phones:' : 'Phone:'?></label>
+
+                                    <?php if(!empty($oneContactValue['phone'][0])) : ?>
+                                    <ol>
                                         <?php foreach ($oneContactValue['phone'] as $phone): ?>
-                                                 <li><?=$phone?></li>
+                                            <li><?=$phone?></li>
                                         <?php endforeach; ?>
-                                        </ol>
-                                    </p>
-                                    <p class="content-blog">
-                                        <label>Email(s):</label>
-                                        <ol>
-                                            <?php foreach ($oneContactValue['email'] as $email): ?>
-                                                <li><?=$email?></li>
-                                            <?php endforeach; ?>
-                                        </ol>
-                                    </p>
-                                </div>
+                                    </ol>
+
+                                    <?php else: print "Contact doesn't have any phone" ?>
+                                    <?php endif;?>
+                                </p>
+
+                                <p class="content-blog">
+                                    <label><?=(count($oneContactValue['email']) > 1) ? 'Emails:' : 'Email:'?></label>
+
+                                    <?php if(!empty($oneContactValue['email'][0])) : ?>
+                                    <ol>
+                                    <?php foreach ($oneContactValue['email'] as $email): ?>
+                                        <li><?=$email?></li>
+                                    <?php endforeach; ?>
+                                    </ol>
+
+                                    <?php else: print "Contact doesn't have any email" ?>
+                                    <?php endif;?>
+                                </p>
                             </div>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
+                        </div>
+                    <?php endforeach; ?>
+
+                    <?php endif; ?>
                 </div>
-                <!--/.GRID BLOG END-->
+                <!--/.GRID CONTACTS END-->
+
             </div>
         </div>
     </div>
 </section>
-<!--/.BLOG END-->
+<!--/.CONTACTS END-->
 
 <!-- Pager -->
 <?php
